@@ -68,20 +68,38 @@ $(document).ready(function() {
   
                 // Creating an image tag
                 var personImage = $("<img>");
+                var personImageAnimate = $("<img2>");
   
                 // Giving the image tag an src attribute of a proprty pulled off the
                 // result item
                 personImage.attr("src", results[i].images.fixed_height_still.url);
+                personImageAnimate.attr("src", results[i].images.fixed_height.url);
   
                 // Appending the paragraph and personImage we created to the "gifDiv" div we created
                 gifDiv.append(p);
                 gifDiv.append(personImage);
   
-                // Prepending the gifDiv to the "#gifs-appear-here" div in the HTML
+                // Appending the gifDiv to the "#gifs-appear-here" div in the HTML
                 $("#gifs-appear-here").append(gifDiv);
               }
             }
             
+            $("#gifs-appear-here").on("click", function() {
+              // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+              var state = $(this).personImageAnimate;
+              // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+              // Then, set the image's data-state to animate
+              // Else set src to the data-still value
+              if (state === personImage) {
+                $(this).attr("src", $(this).personImageAnimate);
+                gifDiv.append(personImageAnimate);
+                $("#gifs-appear-here").append(gifDiv);
+              } else {
+                $(this).attr("src", $(this).personImage);
+                
+              }
+            });
+
 
           });
       });

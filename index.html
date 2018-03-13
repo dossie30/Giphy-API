@@ -4,33 +4,45 @@
 <head>
   <meta charset="utf-8">
   <title>Giphy API</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
 
 <body>
 
-  <div id="container">
-    <h1>Topic Search</h1> 
-    
+  <div class="jumbotron-fluid background py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <h1>Music Artist Search</h1>
+        <div class="col-12 col-md-4 my-3">
 
-    <!-- Rendered Buttons will get Dumped Here  -->
-    <div id="buttons"></div>
+          <!-- Rendered Buttons will get Dumped Here  -->
+          <div id="buttons"></div>
+        </div>
+        <form id="topic-form">
+          <label for="topic-input">Add an Artist</label>
+          <input type="text" id="topic-input">
+          <br>
 
-    <form id="topic-form">
-      <label for="topic-input">Add a Topic</label>
-      <input type="text" id="topic-input">
-      <br>
+          <!-- Button triggers new movie to be added -->
+          <input id="add-topic" type="submit" value="Add an Artist">
+        </form>
 
-      <!-- Button triggers new movie to be added -->
-      <input id="add-topic" type="submit" value="Add a Topic">
-    </form>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row align-items-center">
 
-    <div id="gifs-appear-here"> </div>
+      <div id="gifs-appear-here"> </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/giphy.js"></script>
 
-  </body>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/giphy.js"></script>
+
+</body>
 
 </html>
