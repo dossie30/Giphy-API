@@ -14,7 +14,9 @@ body {
   color: darkcyan;
 }
 
-
+h2 {
+  font-weight: bold;
+}
 
 #buttons {
   padding-top: 60px;
