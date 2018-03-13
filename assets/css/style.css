@@ -1,0 +1,22 @@
+body {
+  background: cornsilk;
+}
+
+.letter {
+  width: 100px;
+  font-size: 25px;
+  border-style: solid;
+  padding: 2px;
+  margin: 2px;
+}
+
+.letter-button-color {
+  color: darkcyan;
+}
+
+
+
+#buttons {
+  padding-top: 60px;
+}
+
