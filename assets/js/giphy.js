@@ -34,6 +34,8 @@ $(document).ready(function() {
       $(".topic-button").on("click", function() {
         // In this case, the "this" keyword refers to the button that was clicked
         var person = $(this).attr("data-letter");
+
+        $("#gifs-appear-here").empty();
   
         // Constructing a URL to search Giphy for the name of the person 
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
@@ -79,6 +81,8 @@ $(document).ready(function() {
                 $("#gifs-appear-here").append(gifDiv);
               }
             }
+            
+
           });
       });
 
